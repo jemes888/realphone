@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>RealPhone</title>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<img src="img/logo.png" alt="logo">
+			</div>
+			<div class="nav-links">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Phone</a></li>
+					<li><a href="#">Accessories</a></li>
+					<li><a href="#">Cart</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="informatioin">
+			<div class="overlay"></div>
+			<img src="img/mobile.png" alt="mobile" class="mobile">
+			<div id="circle">
+				<div class="feature one">
+					<img src="img/camera.png" alt="camera">
+					<div>
+						<h1>Camera</h1>
+						<p>12MP, Wide Angle</p>
+					</div>
+				</div>
+				<div class="feature two">
+					<img src="img/processor.png" alt="processor">
+					<div>
+						<h1>Processor</h1>
+						<p>Snapdragon 729</p>
+					</div>
+				</div>
+				<div class="feature three">
+					<img src="img/battery.png" alt="battery">
+					<div>
+						<h1>Battery Life</h1>
+						<p>5000 MAH</p>
+					</div>
+				</div>
+				<div class="feature four">
+					<img src="img/display.png" alt="display">
+					<div>
+						<h1>Display</h1>
+						<p>6" Cortana Dispaly</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="controls">
+			<img src="img/arrow.png" alt="arrow" id="upBtn">
+			<h3>Featers</h3>
+			<img src="img/arrow.png" alt="arrow" id="downBtn">
+		</div>
+	</div>
+
+	<script>
+		var circle = document.getElementById("circle");
+		var upBtn = document.getElementById("upBtn");
+		var downBtn = document.getElementById("downBtn");
+
+		var rotateValu = circle.style.transform;
+		var rotateSum;
+
+		upBtn.onclick = function(){
+			rotateSum = rotateValu + "rotate(-90deg)";
+			circle.style.transform = rotateSum;
+			rotateValu = rotateSum;
+		}
+		downBtn.onclick = function(){
+			rotateSum = rotateValu + "rotate(90deg)";
+			circle.style.transform = rotateSum;
+			rotateValu = rotateSum;
+		} 
+	</script>
+
+
+</body>
+</html>
